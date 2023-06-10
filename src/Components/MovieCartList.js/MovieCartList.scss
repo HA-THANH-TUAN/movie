@@ -1,0 +1,9 @@
+.movie-cart-list-animation{
+    animation: movieCartList 0.5s ease-in-out;
+
+}
+
+@keyframes movieCartList {
+    from {transform:scale(0.8)}
+    to {transform:scale(1)}
+  }

@@ -1,0 +1,9 @@
+.item-cinema{
+    .area-session{
+        transition: all 2s ease-in-out;
+        
+    }
+    &+.item-cinema{
+        margin-top: 2px ;
+    }
+}

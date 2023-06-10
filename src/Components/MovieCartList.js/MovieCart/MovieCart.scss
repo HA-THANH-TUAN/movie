@@ -1,0 +1,21 @@
+.cart-image{
+    .wraper-image {
+        &:hover img.img-movie {
+            transform: scale(1.2);
+           
+        }
+        &:hover .overlap-cart{
+            transition: all 3s ease-in-out;
+            visibility: visible;
+        }
+        img{
+            transition: transform 0.3s ease-in-out;
+        }
+        .overlap-cart{
+            background-color: #000000b6;
+        }
+    }
+    .wraper-image{
+        box-shadow:  0 0 3px 1px rgb(189, 189, 189);
+    }
+}

@@ -1,0 +1,16 @@
+.slidershow{
+    position: relative;
+    &:hover .arrow-direction{
+        display: block;
+    }
+    .btnArrow {
+        width: 100px;
+        height: 100px;
+        color: rgba(0, 0, 0, 0.8)
+    }
+
+    .btnArrow:hover {
+        color: rgba(0, 0, 0, 0.3)
+    }
+
+}

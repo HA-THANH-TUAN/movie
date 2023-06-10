@@ -1,0 +1,9 @@
+.search-movie{
+    .area-result{
+        ul{
+            &>:nth-child(n){
+                border-bottom: 4px solid rgb(255, 255, 255);
+            }
+        }
+    }
+}

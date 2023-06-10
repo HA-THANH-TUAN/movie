@@ -1,0 +1,26 @@
+.trailer-movie {
+    .overlap{
+
+        animation: overlapTrailer 0.5s forwards;
+    }
+    .main-trailer{
+        animation: dropDownTrailer 0.5s forwards;
+    }
+}
+
+@keyframes  dropDownTrailer{
+    from{
+    }
+    to{
+        transform: translateY(30%);
+    }
+    
+}
+@keyframes  overlapTrailer{
+    from{
+    }
+    to{
+        background-color: rgba(0, 0, 0, 0.931);
+    }
+    
+}

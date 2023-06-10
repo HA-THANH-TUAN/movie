@@ -1,0 +1,18 @@
+.userlogin{
+    --width: 15px;
+    .user-option{
+        top: calc(100% + var(--width));
+        z-index: 1;
+        &::after{
+            z-index: -3;
+            position: absolute;
+            width:var(--width);
+            height:var(--width);
+            content: "";
+            background-color: inherit;
+            rotate: 45deg;
+            top: calc(var(--width) / -2);
+            left: 65%;
+        }
+    }
+}

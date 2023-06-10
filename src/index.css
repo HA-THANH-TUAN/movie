@@ -1,0 +1,91 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.disable-text-selection {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .navbar a.active{
+    @apply text-zinc-200 font-extrabold;
+
+  }
+  .hiden-scroll::-webkit-scrollbar{
+    display: none;
+    
+  }
+  .nav-movie .nav-mobile .active {
+    @apply text-2xl text-blue-800 font-semibold;
+  }
+
+  .shadow-form{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  }
+  .modal-popup {
+    @apply fixed top-0 right-0 w-full h-full transition-opacity overflow-x-hidden overflow-y-auto;
+    transition: opacity 3s ease-in-out; 
+    background-color: rgba(0, 0, 0, 0.872);
+    animation: modal-popup 0.15s ease-in-out alternate  ;
+    animation: fade-modal-center 0.15s ease-in-out both  ;
+  }
+  .modal-popup .modal-popup-dialog{
+    @apply relative w-screen h-screen flex justify-center items-center;
+    
+    animation: fade-modal 0.2s ease-in-out alternate  ;
+    animation: modal-popup-dialog-transaleX 0.5s ease-in-out both  ;
+  
+  }
+  .modal-popup .modal-popup-dialog .modal-popup-wrapper{
+    @apply absolute top-0 right-0 bottom-0 left-0 text-white;
+  
+  }
+  .modal-popup .modal-popup-dialog .modal-popup-content {
+    @apply flex-none basis-full p-6  ;
+  }
+  @keyframes fade-modal {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  @keyframes fade-modal-center {
+
+    to{
+      /* display: flex; */
+      /* justify-content: center;
+      align-items: center; */
+    }
+  }
+  @keyframes modal-popup-dialog-transaleX {
+    from{
+      top:-30%;
+    }
+    to{
+      top: 0%;
+    }
+  }
+
+}
+

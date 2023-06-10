@@ -1,0 +1,31 @@
+.verify-ticket{
+    .overlap-ticket{
+        animation: changeOverlap 0.2s alternate none ;
+        animation-fill-mode: forwards;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+        // background: #000000d7;
+        
+    }
+    .main-ticket{
+        animation: invisibleMainTicket 0.2s alternate none;
+
+    }
+}
+@keyframes changeOverlap {
+    from{
+        background-color: transparent;
+    }
+    to{
+        background-color: #000000d7;
+    }
+    
+}
+@keyframes invisibleMainTicket {
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 1;
+    }
+    
+}

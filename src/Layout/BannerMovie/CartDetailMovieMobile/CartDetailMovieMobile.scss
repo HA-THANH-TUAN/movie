@@ -1,0 +1,19 @@
+.cart-detail-movie{
+    .wraper-image{
+        .image{
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                z-index: 20;
+                background-color:rgba(0, 0, 0, 0.297);
+                
+            }
+
+        }
+    }
+}
