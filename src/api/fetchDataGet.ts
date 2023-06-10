@@ -1,5 +1,5 @@
 const fetchData = async (pathname:string)=>{
-    const url=`https://teachingserver.org/U2FsdGVkX19vV1e+G2Dt1h63IVituNJD+GdHSpis9+rOtKy+FbHJqg==/${pathname}`
+    const url=`${process.env.REACT_APP_URL_API}/${pathname}`
     const res= await fetch(url,{
         headers: {
             'accept': 'application/json',

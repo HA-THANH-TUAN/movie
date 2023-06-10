@@ -22,7 +22,7 @@ const MovieCart = ({movieCart,isHome}) => {
                             <div className='image overflow-hidden cursor-pointer md:rounded lg:rounded-md '>
                                 <img className='w-full img-movie' src={!isHome ? imagePortrait : imageLandscape}  alt=""/>
                                 <div className='overlap-cart flex-col invisible absolute top-0 bottom-0 right-0 left-0 flex items-center justify-center cursor-pointer md:rounded w-full lg:rounded-md'>
-                                    {age==0 ? "" : <span className='inline-block text-white font-semibold px-4 py-0.5 rounded-md bg-orange-500 mb-6'>{age}</span>}
+                                    {age&&age!=0&&<span className={`${age==18?"bg-red-500":age==16?"bg-yellow-500":age==13?"bg-blue-500":"bg-green-600" } mb-5 text-white font-medium flex justify-center items-center rounded w-12 h-7`}>{`${Number(age)?`C${age}`:`${age.toUpperCase()}`}`}</span>}
                                     <button className='border border-orange-500 px-3 py-2 rounded-sm hover:bg-orange-500 text-white bg-[#00000087]' type="button">Mua vé</button>
                                 </div>
                             </div>
@@ -34,7 +34,8 @@ const MovieCart = ({movieCart,isHome}) => {
                             <div className='absolute bottom-0 right-0 flex pb-3'>
                                 <div>
                                     <p className='flex justify-center items-center pr-2  bg-[#00000087] relative mb-2'><span className='text-orange-400 mr-1 ml-3 '><AiFillStar/></span><span className='font-semibold text-white text-lg '>6.4</span></p>
-                                    <span className='inline-block text-white font-semibold px-4 py-0.5 rounded-md bg-orange-500'>16</span>
+                                    {age&&age!=0&&<span className={`${age==18?"bg-red-500":age==16?"bg-yellow-500":age==13?"bg-blue-500":"bg-green-600" } text-white font-medium flex justify-center items-center rounded w-10 h-6`}>{`${Number(age)?`C${age}`:`${age.toUpperCase()}`}`}</span>}
+                                    {/* <span className='inline-block text-white font-semibold px-4 py-0.5 rounded-md bg-orange-500'>16</span> */}
                                 </div>
                             </div>
                        </div>

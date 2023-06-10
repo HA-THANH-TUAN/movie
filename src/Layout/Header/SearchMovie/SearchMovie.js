@@ -42,7 +42,7 @@ const SearchMovie = (props) => {
                                 </p>
                             :
 
-                            resultFilter.map((movie,i)=><li onClick={()=>{nav(`/dat-ve/${movie.slug}`) ; setInputSearch(""); props.setFocusSearch(false)}} 
+                            resultFilter.map((movie,i)=><li onClick={()=>{nav(`/dat-ve/${movie.slug}`); setInputSearch(""); props.setFocusSearch(false)}} 
                                 className='result-item flex p-2 hover:bg-zinc-300' key={i}>
                                     <img className='w-20 ' src={movie.imageLandscape} alt=""/>
                                     <p className='truncate ml-3 font-medium'>{movie.name}</p>

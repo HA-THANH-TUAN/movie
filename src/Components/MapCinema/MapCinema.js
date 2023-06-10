@@ -13,13 +13,13 @@ const MapCinema = ({dataEmbed,handleCloseMap}) => {
         <div className="modal-popup-dialog">
             <div className='modal-popup-wrapper' onClick={(e)=>{handleCloseMap(false)}}></div>
             <div className="modal-popup-content px-10 ">
-                <div className='max-w-xl bg-slate-50 relative mx-auto rounded-lg'>
-                    <div className='bg-white rounded-md mx-auto max-w-[800px] relative p-1 sm:p-3 pointer-events-auto' >
+                <div className='max-w-3xl bg-slate-50 relative mx-auto rounded-lg'>
+                    <div className='rounded-md mx-auto relative p-1 sm:p-3 pointer-events-auto' >
                         <button type="button" className='absolute w-8 h-8 bg-zinc-300 hover:bg-orange-500 hover:text-white hover:text-[1.6rem] -top-4 -right-4 flex justify-center items-center text-2xl rounded-[50%]'
                         onClick={(e)=>{handleCloseMap(false)}}
                         ><MdClose/></button>
                         <h2 className='text-zinc-600 text-center text-2xl pt-3 pb-4 font-semibold '>{dataEmbed.cinemaName}</h2>
-                        <div  className=' max-w-[800px]'>
+                        <div  className=''>
                             <div className='relative w-full overflow-hidden pt-[56.25%] '>
                                <iframe className='w-full h-full absolute top-0 right-0 left-0 bottom-0' src={dataEmbed.urlEmbed} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </div>

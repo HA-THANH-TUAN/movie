@@ -27,13 +27,13 @@ const MovieDetailPage:FC = () => {
     const nav=useNavigate()
     
     useEffect(()=>{
-        if(!idMovie){
+        if(slug){
             dispatch({
                 type:"GET_DATA/MovieInforBySlug",
                 payload:slug
             })
         }
-    },[idMovie])
+    },[slug])
 
     useEffect(()=>{
         return ()=>{
