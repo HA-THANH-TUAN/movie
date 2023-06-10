@@ -43,7 +43,7 @@ const CalenderMovieMobile = ({setProcessMobile,listDate,dataMovieForCinema,dataC
                                           dateStart={listDate[0]}
                                           dateFilter={dateFilter==""?listDate[0]:dateFilter}
                                           onClick={handleGetDate}
-                                        />: "....."
+                                        />:undefined
                     }
                   </div>
                   {!listDate.length==0&&!dataMovieForCinema.length==0&&
